@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ai aissested poem generator</title>
-    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -20,13 +21,11 @@
             autocomplete="off"
             required
             class="form-input-text"
+            id="form-input-poem"
           />
           <input type="submit" value="Submit" class="form-input-submit" />
         </form>
-        <div class="poem">
-          The sky is blue, <br />
-          When it rains in Dublin.
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
       <footer class="footer">
         This project was coded by Sofija Krulj, is open-sourced on
