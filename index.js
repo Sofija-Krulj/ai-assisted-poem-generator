@@ -17,6 +17,9 @@ function fetchPoem(event) {
   let prompt = `Please generate  a poem according to the users ${poemInput.value}. Be concise, don't write too long poems.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   axios.get(apiUrl).then(displayPoem);
+
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
 }
 
 let form = document.querySelector("#main-form");
