@@ -1,9 +1,3 @@
-function userExperience() {
-  let poemElement = document.querySelector("#poem");
-  poemElement.innerHTML = "Generating poem...";
-  displayPoem();
-}
-
 function displayPoem(response) {
   new Typewriter("#poem", {
     strings: response.data.answer,
@@ -26,6 +20,13 @@ function fetchPoem(event) {
 
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
+
+  new Typewriter("#poem", {
+    strings: `Generating a poem about ${poemInput.value}...`,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
 }
 
 let form = document.querySelector("#main-form");
