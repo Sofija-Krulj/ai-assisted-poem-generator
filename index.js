@@ -1,3 +1,9 @@
+function userExperience() {
+  let poemElement = document.querySelector("#poem");
+  poemElement.innerHTML = "Generating poem...";
+  displayPoem();
+}
+
 function displayPoem(response) {
   new Typewriter("#poem", {
     strings: response.data.answer,
